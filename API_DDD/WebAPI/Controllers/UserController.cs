@@ -13,12 +13,12 @@ namespace WebAPI.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
-	public class UsersController : ControllerBase
+	public class UserController : ControllerBase
 	{
 		private readonly UserManager<ApplicationUser> _userManager;
 		private readonly SignInManager<ApplicationUser> _signInManager;
 
-		public UsersController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+		public UserController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
 		{
 			_userManager = userManager;
 			_signInManager = signInManager;

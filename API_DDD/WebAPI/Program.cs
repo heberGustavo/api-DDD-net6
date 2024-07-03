@@ -9,6 +9,7 @@ using Infrastructure.Repository.Generics;
 using Infrastructure.Repository.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.IdentityModel.Tokens;
 using WebAPI.Models;
 using WebAPI.Token;
@@ -67,7 +68,7 @@ builder.Services
 
 			ValidIssuer = "Company.Securiry.Bearer",
 			ValidAudience = "Company.Securiry.Bearer",
-			IssuerSigningKey = JwtSecurityKey.Create("Secret_Key-12345678_example")
+			IssuerSigningKey = JwtSecurityKey.Create("this is my custom Secret key for authentication")
 		};
 
 		option.Events = new JwtBearerEvents

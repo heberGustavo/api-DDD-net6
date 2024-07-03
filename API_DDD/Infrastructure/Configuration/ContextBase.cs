@@ -39,7 +39,7 @@ namespace Infrastructure.Configuration
 
 		private string ObterStringConexao()
 		{
-			return "Password=root;Persist Security Info=True;User ID=root;Initial Catalog=master;Data Source=DESKTOP-N25IT39\\SQLEXPRESS";
+			return "Password=root;Persist Security Info=True;User ID=root;Initial Catalog=DB_API_DDD;Data Source=DESKTOP-N25IT39\\SQLEXPRESS; TrustServerCertificate=true";
 		}
 
 		#endregion

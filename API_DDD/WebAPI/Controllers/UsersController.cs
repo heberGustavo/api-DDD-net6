@@ -29,27 +29,34 @@ namespace WebAPI.Controllers
 		[HttpPost("/api/Autenticar")]
 		public async Task<IActionResult> Autenticar([FromBody] Login login)
 		{
-			if(login == null || string.IsNullOrWhiteSpace(login.email) || string.IsNullOrWhiteSpace(login.senha)) 
-				return Unauthorized();
-
-			var result = await _signInManager.PasswordSignInAsync(login.email, login.senha, false, lockoutOnFailure: false);
-			if (result.Succeeded)
+			try
 			{
-				var userCurrent = await _userManager.FindByEmailAsync(login.email);
+				if (login == null || string.IsNullOrWhiteSpace(login.email) || string.IsNullOrWhiteSpace(login.senha))
+					return Unauthorized();
 
-				var token = new TokenJWTBuilder()
-					.AddSecurityKey(JwtSecurityKey.Create("Secret_Key-123456789"))
-					.AddSubject("Empresa - Heber Gustavo .NET")
-					.AddIssuer("Empresa.Teste.Security.Bearer")
-					.AddAudience("Empresa.Teste.Security.Bearer")
-					.AddClaim("IdUsuario", userCurrent.Id)
-					.AddExpiry(5)
-					.Builder();
+				var result = await _signInManager.PasswordSignInAsync(login.email, login.senha, false, lockoutOnFailure: false);
+				if (result.Succeeded)
+				{
+					var userCurrent = await _userManager.FindByNameAsync(login.email);
 
-				return Ok(token.value);
+					var token = new TokenJWTBuilder()
+						.AddSecurityKey(JwtSecurityKey.Create("this is my custom Secret key for authentication"))
+						.AddSubject("Empresa - Heber Gustavo .NET")
+						.AddIssuer("Empresa.Teste.Security.Bearer")
+						.AddAudience("Empresa.Teste.Security.Bearer")
+						.AddClaim("IdUsuario", userCurrent.Id)
+						.AddExpiry(5)
+						.Builder();
+
+					return Ok(token.value);
+				}
+
+				return Unauthorized();
 			}
-
-			return Unauthorized();
+			catch (Exception ex)
+			{
+				throw;
+			}
 		}
 
 		[AllowAnonymous]
@@ -63,7 +70,7 @@ namespace WebAPI.Controllers
 			var user = new ApplicationUser
 			{
 				UserName = login.email,
-				Email = login.senha,
+				Email = login.email,
 				CPF = login.cpf,
 				Tipo = TipoUsuario.Comum
 			};

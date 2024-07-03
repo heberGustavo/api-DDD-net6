@@ -69,7 +69,7 @@ namespace WebAPI.Token
 				issuer: this.issuer,
 				audience: this.audience,
 				claims: claims,
-				expires: DateTime.UtcNow.AddMinutes(expiryInMinutes),
+				expires: DateTime.Now.AddMinutes(expiryInMinutes),
 				signingCredentials: new SigningCredentials(
 												   this.securityKey,
 												   SecurityAlgorithms.HmacSha256)

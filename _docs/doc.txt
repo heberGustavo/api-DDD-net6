@@ -1,0 +1,5 @@
+- Executar Migration 
+	1. Colocar WebAPI como projeto de inicialização
+	2. Package Manage Console > Selecionar projeto "Infra"
+	3. Add-Migration Meu_commit_migration -Context ContextBase
+	4. Update-Database

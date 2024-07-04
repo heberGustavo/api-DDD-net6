@@ -6,10 +6,11 @@
   
 <p align="center">
   <a href="#white_check_mark-Features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#globe_with_meridians-Tecnologias-e-Conceitos-Implementados">Technology</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#wrench-Como-utilizar">How to use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#gear-Arquitetura">Architecture</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-Licença">Licence</a>
+  <a href="#globe_with_meridians-Technologies-and-Concepts-Implemented">Technology</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#gear-Architecture">Architecture</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#gear-Architecture">Endpoints</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#wrench-How-to-use">How to use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-Licence">Licence</a>
 </p>
 
 
@@ -67,6 +68,10 @@ src
 
 ```
 
+## 📍 Endpoints
+![image](https://github.com/heberGustavo/api-DDD-net6/assets/44476616/6aff890e-751a-44a8-9163-5ba8e6e57fc6)
+
+
 ## :wrench: How to use
 
 Clone that application using [Git](https://git-scm.com) and follow the next steps:
@@ -94,7 +99,7 @@ $ git clone https://github.com/heberGustavo/api-DDD-net6.git
 ```
 
 
-## :memo: Licença 
+## :memo: Licence 
 This project is under the MIT license. See the [LICENSE] for more information.
 
 

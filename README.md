@@ -91,8 +91,7 @@ $ git clone https://github.com/heberGustavo/api-DDD-net6.git
 # 5. Execute Migration
   5.1 - Open the "Package Manager Console"
   5.2 - Select the project "Infra" in "Default project"
-  5.3 - Paste this commands
-    5.3.1 - Update-Database
+  5.3 - Execute this command: Update-Database
 
 # 6. Run the application
 

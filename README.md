@@ -68,7 +68,7 @@ src
 
 ```
 
-## 📍 Endpoints
+## :round_pushpin: Endpoints
 ![image](https://github.com/heberGustavo/api-DDD-net6/assets/44476616/6aff890e-751a-44a8-9163-5ba8e6e57fc6)
 
 
